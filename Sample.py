@@ -5,8 +5,7 @@ from gimpfu import *
 have_gimp11 = gimp.major_version > 1 or \
 	      gimp.major_version == 1 and gimp.minor_version >= 1
 
-def python_clothify(timg, tdrawable, bx=9, by=9,
-		    azimuth=135, elevation=45, depth=3):
+def python_clothify(timg, tdrawable, bx=9, by=9, azimuth=135, elevation=45, depth=3):
 	bx = 9 ; by = 9 ; azimuth = 135 ; elevation = 45 ; depth = 3
 	width = tdrawable.width
 	height = tdrawable.height

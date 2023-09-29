@@ -22,7 +22,7 @@ register(
     "Evan Williams",
     "Evan Williams",
     "2023",
-    "<Image>/Filters/Create Layer From Selection...",
+    "<Image>/Filters/Evan's Custom Scripts/Create Layer From Selection...",
     "*",
     [],
     [],
