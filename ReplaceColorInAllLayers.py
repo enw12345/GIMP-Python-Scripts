@@ -3,8 +3,6 @@
 # Import the GIMP module
 from gimpfu import *
 
-# 11.8, 51.4, 27.5
-
 
 def get_all_layers(image, drawable, replace, place):
     layers = image.layers
@@ -47,8 +45,12 @@ def set_active_layer(image, layer):
 def change_active_layer_color(image, replace):
     active_layer = pdb.gimp_image_get_active_layer(image)
 
+    # pdb.gimp_layer_resize_to_image_size(active_layer)
     # Find the color in that layer and make it a part of the selection
     pdb.gimp_image_select_color(image, 2, active_layer, replace)
+
+    if pdb.gimp_selection_is_empty(image):
+        return
 
     # Change the slection color to that color
     pdb.gimp_drawable_edit_fill(active_layer, 0)
